@@ -13,7 +13,7 @@
   "scripts": {
     "compile": "babel src --out-dir .",
     "exec": "node -r babel-register src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,9 @@
     "presets": [
       ["env", { "targets": {"node": 7}, "useBuiltIns": true}]
     ]
+  },
+  "ava": {
+    "files": [ "test/**/*.js" ],
+    "source": [ "src/**/*.js" ]
   }
 }

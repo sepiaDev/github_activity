@@ -1,0 +1,26 @@
+{
+  "name": "Github_activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "source-map-support": "^0.4.14"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.2"
+  },
+  "scripts": {
+    "compile": "babel src --out-dir .",
+    "exec": "node -r babel-register src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "sourceMaps": "inline",
+    "presets": [
+      ["env", { "targets": {"node": 7}, "useBuiltIns": true}]
+    ]
+  }
+}
